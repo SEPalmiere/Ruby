@@ -1,0 +1,11 @@
+require "awesome_print" # biblioteca 
+require "./classes/pessoa" # classe criada na pasta
+require "./classe/carro"
+
+puts "Executando a adição de arquivos externos"
+
+candy = Pessoa.new('Candy')
+carro = Carro.new("Passat", "Candy" )
+
+p candy
+p carro

@@ -1,0 +1,11 @@
+require_relative "conta_bancaria" # requie_relative carrega arquivos do diretorio onde o arquivo atual está localizado
+
+
+conta_edu = ContaBancariam.new('Eduardo', 100)
+conta_sam = ContaBancaria.new('Samanta', 200)
+conta_paul = ContaBancaria.new('Paulo', 300)
+
+conta.paul.transferir(conta_edu, 100)
+
+p conta_edu.saldo
+p conta_paul.saldo

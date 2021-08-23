@@ -1,0 +1,43 @@
+class Pessoa
+    def initialize(nome) # construtor ruby
+        @nome = nome # @nome recebe nome para poder ficar disponivel durante todo o ciclo de vida do objeto na memória, só é acessivel dentro da classe
+    end
+
+    def imprimir_ola
+        puts "Olá #(@nome)"
+    end    
+
+    def nome = (noco_nome)
+        @nome = novo_nome
+    end
+end
+
+
+sergio = Pessoa.new('Sergio')
+kayla = Pessoa.new('kayla')
+p sergio
+p kayla
+
+puts '-' * 80
+sergio.imprimir_ola
+kayla.imprimir_ola
+
+kayla.nome = "Melissa"
+kayla.imprimir_ola
+
+
+class Pessoas # versão melhorada por objeto setter
+    attr_nome :nome
+    def initialize(nome) # construtor ruby
+        @nome = nome # @nome recebe nome para poder ficar disponivel durante todo o ciclo de vida do objeto na memória, só é acessivel dentro da classe
+    end
+
+    def imprimir_ola
+        puts "Olá #(@nome)"
+    end    
+end
+
+# Importação de classes e arquivos externos é feita por meio do metodo require
+
+# require "./classes/pessoa"
+

@@ -1,0 +1,13 @@
+# Simbolos
+
+# Simbolos são objetos criados com ':' no inicio do identificador e são imutaveis
+
+# Repare que todas as vezes que usamos uma mesma string o Ruby aloca novo espaço de memória para ela, os simbolos são usados para usar uma unica posição de memoria.
+
+puts 'Sergio'.object_id
+puts 'Sergio'.object_id
+puts 'Sergio'.object_id
+puts '-' * 50
+puts :Sergio.object_id
+puts :Sergio.object_id
+

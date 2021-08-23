@@ -1,0 +1,11 @@
+# Palindromo são palavras iguais lidas de tras para frente exemplo ovo
+
+def palindromo?(palavra)
+    palavra.downcase == palavra.downcase.reverse
+end
+
+puts palindromo?("Ovo")
+
+puts palindromo?('fui')
+
+

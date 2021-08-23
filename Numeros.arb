@@ -1,0 +1,20 @@
+# Numeros
+# Numeros em ruby podem ser inteiros ou floats (ponto flutuante).
+
+# inserir valor grande
+
+puts 150630
+puts 150_630  # O _ facilita o programador entender o numero enquanto é ignorado pelo ruby nas aplicações
+
+
+# somar float com int sempre retorna float
+
+puts 5 + 3.88
+
+# Verificar se numero é par
+
+p 10.even?
+
+# Verificar se numero é impar
+
+p 10.odd?

@@ -1,0 +1,28 @@
+# Repare que a palavra return é opcional pois o ruby sempre retorna o resultado da execução da última linha
+
+def soma (valor1, valor2, valor3)
+    puts "Estou somando #(valor1), #(valor2) e #(valor3)"
+    valor1 + valor2 + valor3
+end
+
+
+puts soma(10,3,2)
+
+
+# Tornar uma das variaveis de entrada como opcional
+
+def somar (valor1, valor2, valor3 = 0)
+    puts "Estou somando #(valor1), #(valor2) e #(valor3)"
+    valor1 + valor2 + valor3
+end
+
+puts somar(10,10)
+
+
+# Definir nomes paras as variaveis de entrada, para poder chama-las em qualquer posição
+
+def somar_param (valor1:, valor2:, valor3:)
+    soma (valor1, valor2, valor3)
+end
+
+puts soma_param(valor3: 10, valor2: 8, valor1: 2)

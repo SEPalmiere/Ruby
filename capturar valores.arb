@@ -1,0 +1,19 @@
+# capturar valor
+
+puts "Digite o nome: "
+nome = gets
+
+# Repare que o valor capturado possui um \n no final que pode ser eliminado usando o metodo chomp
+nome = nome.chomp()
+
+p nome
+
+
+# Para automatizar o chomp no gets usar
+
+nomes = gets.chomp
+
+# Para transformar um valor capturado de string para int
+
+valor = gets.chomp.to_i
+p valor.class

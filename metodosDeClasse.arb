@@ -1,0 +1,25 @@
+
+class Pessoa
+    @@num_pessoas = 0 # os simbolos @@ denotam que a variavel existe apenas dentro da classe e so podem ser modificadas por funções com self
+
+    def self.gerar # self serve para atribuir uma função de atributo que não dependerá da nstanciação de um objeto, ou seja não preciso criar uma nova pessoa para usar este atributo. 
+        @@num_pessoas += 1
+        puts "Estou gerando uma pessoa"
+        Pessoa.new
+    end
+
+    def self.num_pessoas # Somente funções com self acessam e modificam variaveis locais criadas com '@@'
+        @@num_pessoas
+    end
+end
+
+
+
+pessoa = Pessoa.gerar # Gera uma pessoa independente do New
+pessoa1 = Pessoa.gerar # Gera uma pessoa independente do New
+pessoa2 = Pessoa.gerar # Gera uma pessoa independente do New
+pessoa3 = Pessoa.gerar # Gera uma pessoa independente do New
+p Pessoa.num_pessoas
+
+pessoa5 = Pessoa.new # gera um erro
+p pessoa2

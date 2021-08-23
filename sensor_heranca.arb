@@ -1,0 +1,31 @@
+class Sensor
+    def instalar 
+        puts "Estou instalando o sensor"
+    end
+
+    def iniciar 
+        puts "Estou inicializando o sensor"
+    end
+
+    def metricas
+        puts "Estou realizando as medidas"
+        puts "Estou analisando os resultados"
+    end
+end
+
+
+class SensorTemperatura < Sensor # o simbolo '<' indica que uma classe herda de outra classe
+    def metricas # Sobrescrevendo a função coletar metrics
+        puts "Estou realizando medidas de temperatura"
+        puts "A temperatura está em ºC"
+        super # Chama o restante do metodo da classe mãe, no caso a classe Sensor
+    end
+end
+
+
+
+sensor = SensorTemperatura.new
+sensor.instalar
+sensor.iniciar
+sensor.metricas
+

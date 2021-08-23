@@ -1,0 +1,72 @@
+# Public podem ser acessados por qualquer metodo em qulquer objeto
+# Private só podem ser chamados dentro de sua própria instancia. Não é possivel acessar métodos privados de outras instancias
+# Protected podem ser chamados por qualquer instancia se for da mesma classe/superclasse
+
+class MinhaClasse
+    def m1
+        puts "Metodo M1"
+    end
+        
+    def m2
+        puts "Metodo M2"
+    end
+
+    private def m3 # o private colocado antes da def de função torna somente esta função privada
+        puts "Metodo M3"
+    end
+    private # a partir deste ponto todas as funções são privadas e suas chamadas irão falhar
+
+    def m4
+        puts "Metodo M4"
+    end
+    protected # A inserção do protected faz com que o metodo possa rodar dentro de outra subclasse. Note qie o protected deve ser colocado antes do metodo def para funcionar
+    def m5
+        puts "Metodo M5"
+    end
+
+    def m6
+        puts "Metodo M6" # os dados encapsulados por private podem ser acessado por um metodo publico acessivel a outras instancias
+        m3
+        m4
+        m5
+    end
+end
+
+# A partir daqui é outro contexto
+puts '-' * 100
+
+obj = MinhaClasse.new
+obj.m1
+obj.m2
+# obj.m3 # Da erro se for chamada
+# obj.m4 # Da erro se for chamada
+# obj.m5 # Da erro se for chamada
+
+class MinhaSubclasse < MinhaClasse
+    def m7
+        m1 
+        m2
+        m3
+        m4
+        m5
+        puts "Metodo M7"
+    end 
+end
+
+obj2 = MinhaSubclasse.new
+obj2.m7
+
+puts '-' * 100
+
+class MinhaSubclasse2 < MinhaClasse
+    def m8
+        outro_obj = MinhaClasse.new
+        m3
+        m4
+        puts "Metodo M8"
+        outro_obj.m5 # So pode ser chamado com o metodo protected inserido dentro da classe MinhaClasse
+    end 
+end
+
+obj2 = MinhaSubclasse2.new
+obj2.m8

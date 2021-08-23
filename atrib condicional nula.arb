@@ -1,0 +1,15 @@
+# Atribuição condicional de variavel
+
+variavel = 10
+puts variavel
+
+# Note que a variavel não vai mudar de valor pois ela já possui um valor
+variavel ||= 20
+puts variavel
+
+# limpando a variavel
+variavel = nil
+puts variavel
+
+variavel ||= 20
+puts variavel

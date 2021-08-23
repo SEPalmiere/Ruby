@@ -1,0 +1,75 @@
+# Trabalhando com STRINGS
+
+ola = "Hello World"
+nome = 'Sergio'
+
+# Concatenacao
+
+puts ola + " " + nome
+puts "Seja bem vindo #{nome}"
+
+puts nome * 10
+
+# Diferenca entre puts, print e p
+lista = ['a', 'b', 'c', 'd']
+puts lista
+print lista # print não pula linha, necessita de \n para pular linha
+p lista # p mostra na forma de vetor
+puts '-' * 30
+p nome [0]
+p nome [-1]
+puts nome.length
+p nome.chars # Separa o nome em um array com palavras unicas
+p nome[0,3]
+name = nome.split
+p name
+num = 88
+puts "O número é %05d" %num #Mostra o numero com 3 digitos 0 antes dele, o d siginifica a quantidade de digitos requeridos.
+puts '-' * 30
+mensagem = "        ola     eu    estou     bem!"
+puts mensagem
+puts mensagem.strip
+
+puts '-' * 30
+puts nome.upcase
+puts nome.downcase
+
+# upcase e upcase!
+# o upcase e downcase sem o '!' cria outra variavel na memoria, já o upcase! substitui o conteudo da variavel por letras maiusculas.
+puts '-' * 30
+puts nome
+puts nome.upcase!
+puts nome
+puts '-' * 30
+
+puts nome.downcase!
+puts nome.capitalize
+# O comando nome.object_id e nome.upcase.object_id mostram o local da memoria alocada
+
+# gsub
+
+mensagem = "Como você está hoje nome?"
+puts mensagem.gsub("nome", 'Sergio')
+
+lista = mensagem.split
+p lista
+p lista.class # verificar a classe de uma variavel
+
+
+# Separar texto com padrões diferentes do espaço, devemos usar o padrão como referencia
+
+mensagem2 = "Oito-hora-e-tudo-bem!"
+mensagem2
+
+lista2 = mensagem2.split("-")
+p lista2
+
+puts '-' * 30
+# Trabalhar com strings longas
+mensagem3 = <<~Mensagem
+Estou adorando aprender 
+a linguagem Ruby.
+Quero aprender mais 
+Mensagem
+
+puts mensagem3

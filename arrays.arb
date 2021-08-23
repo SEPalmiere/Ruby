@@ -1,0 +1,26 @@
+# Criação de Arrays
+
+lista = []
+lista2 = Array.new
+
+# Em Ruby arrays podem ter elementos de diferentes tipos
+
+lista3 = [1,2,'3']
+
+# Inserir elementos na lista
+
+lista << "novo item"
+
+# ou
+
+lista.append(4,5)
+
+p lista.length # tamanho da lista
+p lista.empty? # verifica se o array esta vazio
+p lista.first # pega primeiro valor
+p lista.last # pega último valor
+
+# Somar listas
+
+lista4 = lista + lista3
+p lista4

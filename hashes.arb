@@ -1,0 +1,26 @@
+# Hashes são dicionários
+
+# Criação de hashes
+
+hash = {}
+# ou
+hash2 = Hash.new
+
+hash3 = {'laranja': 4, 'banana': 15, 'uva': 50}
+p hash3
+
+# Acessar valor
+
+p hash3[:banana]
+
+# Atribuir novo valor
+
+hash3[:melancia] = 20
+
+p hash3
+
+# metodos
+
+p hash3.keys # retorna um array com as chaves
+p hash3.values # retorna um array com os valores
+p hash3.empty? # verifica se o hash está vazio

@@ -1,0 +1,44 @@
+valor = 20
+if valor > 50
+    puts 'Eu sou maior que 50'
+elsif valor == 50
+    puts "Eu sou igual a 50"
+else
+    puts "Eu sou menor que 50"
+end
+
+# Outra opção mais legivel
+valore = 30
+puts "Eu sou maior que 50" if valore > 40
+
+# função unless é o contrario do if, se a condição não for verdadeira o bloco é executado
+
+valora = 30
+puts "Eu sou maior que 40" unless valora > 40
+
+
+# Case e When
+
+linguagem = 'ruby'
+case linguagem
+when 'ruby'
+    puts 'Bem vindo ao ruby'
+when "python"
+    puts 'Bem vindo ao python'
+else
+    puts 'Bem vindo ao java'
+end
+
+
+puts "Digite um valor: "
+valori = gets.chomp.to_i
+
+if valori >= 50 && valori <= 100
+    puts "Estou entre 50 e 100"
+end
+
+
+# If Else numa unica linha
+
+val = 30
+val > 20 ? puts "Eu sou maior que 20" : puts "Eu sou menor que 20"
